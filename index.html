@@ -1,0 +1,116 @@
+<!-- 
+  Berikut merupakan file index.html milik saya untuk submission dicoding frontend dasar untuk memelajari manipulasi DOM dan BOM. Untuk style saya menggunakan framework TailwindCSS. Untuk fonts saya memakai fonts  GOLOS TEXT (available on Google Fonts)
+
+  Sekian pengantar dari saya
+  -Calvin Samuel Simbolon
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dicoding Frontend - Library apps</title>
+
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="dist/suplement.css" />
+    <link rel="shortcut icon" href="assets/favicon.png" type="image" />
+  </head>
+  <body class="bg-amber-200">
+    <nav class="grid bg-amber-800 w-full h-20 px-6 lg:px-20 content-center">
+      <h1 class="font-bold text-2xl text-stone-100">Dicoding Bookshelf Apps</h1>
+    </nav>
+    <main class="h-screen grid justify-items-center">
+      <div class="flex flex-col w-full xl:max-w-7xl gap-3">
+        <h1 class="max-w-xl h-fit  mx-20 my-2 border-2 rounded-xl px-4 py-2 bg-stone-50">Welcome Back!</h1>
+        <!-- Section buku -->
+        <div class="grid mx-auto place-content-center lg:flex gap-5">
+          <!-- Input Buku -->
+          <div
+            class="grid h-fit gap-3 w-96 border-4 border-amber-500 rounded-lg px-5 py-8"
+          >
+            <h1 class="font-bold text-2xl text-amber-900">Input Buku</h1>
+            <form id="inputBook" class="grid gap-2">
+              <div class="grid gap-1 input">
+                <label class="font-medium text-stone-700" for="inputJudulBuku"
+                  >Judul</label
+                >
+                <input
+                  class="border-1 border-amber-300 rounded-lg active:border-amber-700 bg-stone-100 px-5 py-1.5 text-stone-600"
+                  id="inputJudulBuku"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="grid gap-1 input">
+                <label class="font-medium text-stone-700" for="inputPenulis"
+                  >Penulis</label
+                >
+                <input
+                  class="border-1 border-amber-300 rounded-lg active:border-amber-700 bg-stone-100 px-5 py-1.5 text-stone-600"
+                  id="inputPenulis"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="grid gap-1 input">
+                <label class="font-medium text-stone-700" for="inputTahun"
+                  >Tahun</label
+                >
+                <input
+                  class="border-1 border-amber-300 rounded-lg active:border-amber-700 bg-stone-100 px-5 py-1.5 text-stone-600"
+                  id="inputTahun"
+                  type="number"
+                  min="1000"
+                  max="2050"
+                  required
+                />
+              </div>
+              <div class="input_inline flex gap-3">
+                <input
+                  id="inputBerhasil"
+                  type="checkbox"
+                  class="default:ring-amber-800 checked:bg-amber-600"
+                />
+                <label for="inputBerhasil">Selesai dibaca</label>
+              </div>
+              <button
+                id="bookSubmit"
+                class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-4 py-2 rounded-lg"
+                type="submit"
+              >
+                Masukkan Buku
+              </button>
+            </form>
+          </div>
+          <!-- Input buku selesai -->
+
+          <!-- Buku belum dibaca -->
+          <div
+            class="grid h-fit gap-3 w-96 border-4 border-amber-500 rounded-lg px-5 py-8"
+          >
+            <h1 class="text-xl font-bold">Belum Selesai Dibaca.</h1>
+            <div id="durungBar" class="book_list"></div>
+          </div>
+          <!-- Belum dibaca selesai -->
+
+          <!-- Buku sdh dibaca -->
+          <div
+            class="grid h-fit gap-3 w-96 border-4 border-amber-500 rounded-lg px-5 py-8"
+          >
+            <h1 class="text-xl font-bold">Belum Selesai Dibaca.</h1>
+            <div id="wesBar" class="book_list"></div>
+          </div>
+          <!-- Belum sdh selesai -->
+        </div>
+        <!-- End section buku -->
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+
+    <footer class="bg-amber-900 text-white text-center py-3">
+      <h1>&#169; 2023 Calvin Samuel Simbolon</h1>
+    </footer>
+  </body>
+</html>

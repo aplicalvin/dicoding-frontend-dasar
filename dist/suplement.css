@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Golos";
+    src: url('../assets/fonts/GolosText-VariableFont_wght.ttf');
+}
+
+* {
+    font-family: "Golos";
+}
+
+.cekbang {
+    border: 1px solid red;
+}
